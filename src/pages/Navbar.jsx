@@ -1,84 +1,66 @@
-
 import { useState } from "react";
 import logoMain from "../logo/logoMain.png"; 
 
 export default function Navbar() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+    const [isNavOpen, setIsNavOpen] = useState(false);
+    const navigateMenu = ["Home", "About", "Service", "Gallery", "Contact"]
 
-  return (
-    <div className="relative border-b border-gray-400 py-4 px-6 lg:px-10 flex items-center justify-between">
-      {/* Logo */}
-      <a href="/">
-        <img src={logoMain} alt="Logo" className="h-12" /> {/* Adjust height as needed */}
-      </a>
+    return (
+        <div className="relative w-full">
+            {/* Background Image with Low Opacity */}
+            <div className="absolute inset-0 bg-[url(./logo/navbarbg.jpg)] bg-cover bg-center opacity-30"></div>
 
-      {/* Mobile Menu */}
-      <nav>
-        <section className="MOBILE-MENU flex lg:hidden">
-          {/* Hamburger Icon */}
-          <div
-            className="HAMBURGER-ICON space-y-2 cursor-pointer"
-            onClick={() => setIsNavOpen((prev) => !prev)}
-          >
-            <span className="block h-0.5 w-8 bg-gray-600 transition-all"></span>
-            <span className="block h-0.5 w-8 bg-gray-600 transition-all"></span>
-            <span className="block h-0.5 w-8 bg-gray-600 transition-all"></span>
-          </div>
+            {/* Navbar */}
+            <div className="relative z-10 fixed top-0 left-0 w-full bg-white/10 backdrop-blur-lg shadow-md border-b border-gray-300">
+                <div className="container flex items-center justify-between mx-auto px-4 lg:px-10 py-4">
+                    {/* Logo */}
+                    <a href="/">
+                        <img src={logoMain} alt="Logo" className="h-12" />
+                    </a>
 
-          {/* Mobile Navigation - Dropdown Below Navbar */}
-          <div
-            className={`absolute left-0 w-full bg-white shadow-md transition-all duration-300 ease-linear overflow-hidden ${
-              isNavOpen ? "max-h-64 py-4 opacity-100" : "max-h-0 py-0 opacity-0"
-            }`}
-            style={{ top: "100%" }} // Ensures it starts at the navbar's bottom
-          >
-            {/* Close Button */}
-            {/* <div
-              className="flex justify-end px-4"
-              onClick={() => setIsNavOpen(false)}
-            >
-              <svg
-                className="h-6 w-6 text-gray-600 cursor-pointer"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            </div> */}
+                    {/* Mobile Menu Button */}
+                    <button
+                        className="lg:hidden flex flex-col justify-between h-6 w-8 relative z-50"
+                        onClick={() => setIsNavOpen((prev) => !prev)}
+                        aria-label="Toggle Navigation"
+                    >
+                        <span className={`block h-0.5 w-8 bg-gray-600 transition-all duration-300 ${isNavOpen ? "rotate-45 translate-y-2.5 bg-black" : ""}`} />
+                        <span className={`block h-0.5 w-8 bg-gray-600 transition-all duration-300 ${isNavOpen ? "opacity-0" : ""}`} />
+                        <span className={`block h-0.5 w-8 bg-gray-600 transition-all duration-300 ${isNavOpen ? "-rotate-45 -translate-y-2.5 bg-black" : ""}`} />
+                    </button>
 
-            {/* Mobile Links */}
-            <ul className="flex flex-col items-center gap-4 text-lg font-medium px-6">
-              {["Home", "About", "Service", "Gallery", "Contact"].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`/${item.toLowerCase()}`}
-                    className="hover:text-blue-500 transition"
-                    onClick={() => setIsNavOpen(false)}
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+                    {/* Mobile Navigation */}
+                    <div
+                        className={`absolute left-0 w-full bg-white/80 backdrop-blur-md shadow-lg transition-all duration-300 ease-in-out overflow-hidden lg:hidden ${isNavOpen ? "max-h-64 opacity-100 py-4" : "max-h-0 opacity-0 py-0"}`}
+                        style={{ top: "100%" }}
+                    >
+                        <ul className="flex flex-col items-center gap-4 text-lg font-medium px-6">
+                            {navigateMenu.map((item) => (
+                                <li key={item}>
+                                    <a
+                                        href={`/${item.toLowerCase()}`}
+                                        className="hover:text-blue-500 transition"
+                                        onClick={() => setIsNavOpen(false)}
+                                    >
+                                        {item}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-        {/* Desktop Menu */}
-        <ul className="DESKTOP-MENU hidden space-x-8 lg:flex text-lg font-medium">
-          {["Home", "About", "Service", "Gallery", "Blog", "Contact"].map((item) => (
-            <li key={item}>
-              <a href={`/${item.toLowerCase()}`} className="hover:text-blue-500 transition">
-                {item}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
-  );
+                    {/* Desktop Menu */}
+                    <ul className="hidden lg:flex space-x-8 text-lg font-medium">
+                        {navigateMenu.map((item) => (
+                            <li key={item}>
+                                <a href={`/${item.toLowerCase()}`} className="hover:text-blue-500 transition">
+                                    {item}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    );
 }

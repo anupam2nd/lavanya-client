@@ -4,97 +4,122 @@ export default function Services() {
   return (
     <>
       <div className="w-full h-[500px] bg-[url(/images/bg-texture.jpeg)] bg-cover bg-no-repeat bg-top">
-        <div className="container">
-            <div className="flex">
-                <img src="/images/portrait.jpeg" className="w-48 h-64" />
+        <div className="container h-full">
+          <div className="flex flex-col md:flex-row items-center h-full p-5 md:p-0">
+            <div className="w-full md:w-1/2 h-full relative flex items-center justify-center ">
+              <div className="size-80 md:size-96 lg:size-[450px] overflow-hidden border-8 border-white rounded-full">
+                <img src="/images/service-banner.jpeg" className="w-full h-[550px] object-cover object-center transform -translate-y-1/7" />
+              </div>
             </div>
+            <div className="w-full md:w-1/2 h-full flex flex-col items-center justify-center space-y-3 ">
+              <h2 className="font-sans uppercase text-2xl md:text-5xl font-semibold text-gray-600">
+                services
+              </h2>
+              <p className="text-base md:text-xl text-center">
+                Where Passion Meets Precision: Exceptional Makeup Services for Every Occasion!
+              </p>
+            </div>
+
+          </div>
         </div>
       </div>
-      <div class="lg:pt-4 lg:pr-8">
-        <div class="lg:max-w-lg">
-          <h2 class="text-base/7 font-semibold text-indigo-600">
-            Deploy faster
-          </h2>
-          <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
-            A better workflow
-          </p>
-          <p class="mt-6 text-lg/8 text-gray-600">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-            ratione.
-          </p>
-          <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-gray-900">
-                <svg
-                  class="absolute top-1 left-1 size-5 text-indigo-600"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Push to deploy.
-              </dt>
-              <dd class="inline">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
-              </dd>
+      <div className="container py-10">
+        <h2 class="text-base/7 font-semibold text-primary text-gray-600">
+          Experience the Best: Unparalleled Quality Services Guaranteed!
+        </h2>
+        <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+          Our Beauty Services
+        </p>
+      </div>
+      {/* premium range */}
+      <div className="w-full h-12 flex items-center justify-center bg-gradient-to-r from-[#b87912] from-10% via-[#f9eead] to-[#b87912]">
+        <h5 className="font-semibold uppercase text-xl tracking-wider">
+          premium range
+        </h5>
+      </div>
+      <div className="w-full h-fit bg-gradient-to-bl from-gray-100 to-teal-100">
+        <div className="container py-5">
+          <div className="w-full h-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-10">
+            <div className="w-full min-w-32 h-auto shadow-lg">
+              <h2 className="font-sans text-xl font-extralight tracking-wider mb-2 px-2">Bridal Makeup</h2>
+              <div className="h-fit">
+                <img src="/images/pre-img/bridal.jpeg" className="w-full h-full" alt="bridal-makeup" />
+              </div>
             </div>
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-gray-900">
-                <svg
-                  class="absolute top-1 left-1 size-5 text-indigo-600"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                SSL certificates.
-              </dt>
-              <dd class="inline">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo.
-              </dd>
+            <div className="w-full min-w-32 h-auto shadow-lg">
+              <h2 className="font-sans text-xl font-extralight tracking-wider mb-2 px-2">Party Look</h2>
+              <div className="h-fit">
+                <img src="/images/pre-img/party.jpeg" className="w-full h-full" alt="haldi" />
+
+              </div>
             </div>
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-gray-900">
-                <svg
-                  class="absolute top-1 left-1 size-5 text-indigo-600"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path d="M4.632 3.533A2 2 0 0 1 6.577 2h6.846a2 2 0 0 1 1.945 1.533l1.976 8.234A3.489 3.489 0 0 0 16 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234Z" />
-                  <path
-                    fill-rule="evenodd"
-                    d="M4 13a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4H4Zm11.24 2a.75.75 0 0 1 .75-.75H16a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75V15Zm-2.25-.75a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75h-.01Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                Database backups.
-              </dt>
-              <dd class="inline">
-                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
-                Et magna sit morbi lobortis.
-              </dd>
+            <div className="w-full min-w-32 h-auto shadow-lg">
+              <h2 className="font-sans text-xl font-extralight tracking-wider mb-2 px-2">Haldi/ Mehendi Look</h2>
+              <div className="h-fit">
+                <img src="/images/pre-img/haldi.jpeg" className="w-full h-full" alt="haldi" />
+              </div>
             </div>
-          </dl>
+          </div>
         </div>
       </div>
+
+      {/* classic range */}
+      <div className="w-full h-12 flex items-center justify-center bg-gradient-to-r from-[#b87912] from-10% via-[#f9eead] to-[#b87912]">
+        <h5 className="font-semibold uppercase text-xl tracking-wider">
+          classic range
+        </h5>
+      </div>
+      <div className="w-full h-fit bg-gradient-to-bl from-gray-100 to-teal-100">
+        <div className="container py-5">
+          <div className="w-full h-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-10">
+            <div className="w-full min-w-32 h-auto shadow-lg">
+              <h2 className="font-sans text-xl font-extralight tracking-wider mb-2 px-2">Bridal Makeup</h2>
+              <div className="h-fit">
+                <img src="/images/class-range-img/bridal.jpeg" className="w-full h-full" alt="bridal-makeup" />
+              </div>
+            </div>
+            <div className="w-full min-w-32 h-auto shadow-lg">
+              <h2 className="font-sans text-xl font-extralight tracking-wider mb-2 px-2">Party Look</h2>
+              <div className="h-fit">
+                <img src="/images/class-range-img/party.jpeg" className="w-full h-full" alt="haldi" />
+
+              </div>
+            </div>
+            <div className="w-full min-w-32 h-auto shadow-lg">
+              <h2 className="font-sans text-xl font-extralight tracking-wider mb-2 px-2">Haldi/ Mehendi Look</h2>
+              <div className="h-fit">
+                <img src="/images/class-range-img/haldi.jpeg" className="w-full h-full" alt="haldi" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* nail art and mehendi */}
+      <div className="w-full h-12 flex items-center justify-center bg-gradient-to-r from-[#b87912] from-10% via-[#f9eead] to-[#b87912]">
+        <h5 className="font-semibold uppercase text-xl tracking-wider">
+          Nail Art & Mehendi
+        </h5>
+      </div>
+      <div className="w-full h-fit bg-gradient-to-bl from-gray-100 to-teal-100">
+        <div className="container py-5">
+          <div className="w-full h-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-10">
+            <div className="w-full min-w-32 h-auto shadow-lg">
+              <h2 className="font-sans text-xl font-extralight tracking-wider mb-2 px-2">Nail Art</h2>
+              <div className="h-fit">
+                <img src="/images/nail-mehendi/nail.jpeg" className="w-full h-full" alt="nail-art" />
+              </div>
+            </div>
+            <div className="w-full min-w-32 h-auto shadow-lg">
+              <h2 className="font-sans text-xl font-extralight tracking-wider mb-2 px-2">Mehendi</h2>
+              <div className="h-fit">
+                <img src="/images/nail-mehendi/mehendi.jpeg" className="w-full h-full" alt="mehendi" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </>
   );
 }

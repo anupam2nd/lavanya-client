@@ -10,6 +10,11 @@
   @apply mx-auto max-w-7xl px-2 sm:px-3 lg:px-5;
 }
 
+:root {
+  --primary: #ed1b69; /* Define primary color */
+  --secondary: #243f86; /* Define secondary color */
+}
+
 
 .hideMenuNav {
   display: none;

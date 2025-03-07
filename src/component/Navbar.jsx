@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logoMain from "../logo/logoMain.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -8,7 +8,7 @@ export default function Navbar() {
   const navigateMenu = [
     {
       name: "Home",
-      link: "home",
+      link: "",
     },
     {
       name: "Services",
@@ -29,9 +29,9 @@ export default function Navbar() {
       <div className="relative z-10 top-0 left-0 w-full bg-white/10 backdrop-blur-lg shadow-md border-b border-gray-300">
         <div className="container flex items-center justify-between mx-auto px-4 lg:px-10 py-4">
           {/* Logo */}
-          <a href="/">
+          <Link to="/">
             <img src={logoMain} alt="Logo" className="h-12" />
-          </a>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button

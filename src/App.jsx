@@ -1,12 +1,10 @@
 import React from 'react'
 import Home from './pages/Home'
-import Navbar from './pages/Navbar'
+import Navbar from './component/Navbar'
+import { RouterProvider } from 'react-router-dom'
+import router from './router'
+ 
 
 export default function App() {
-  return (
-    <>
-    <Navbar />
-      <Home/>
-    </>
-  )
+  return <RouterProvider router={router} />
 }

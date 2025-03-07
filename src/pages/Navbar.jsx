@@ -11,8 +11,8 @@ export default function Navbar() {
             <div className="absolute inset-0 bg-[url(./logo/navbarbg.jpg)] bg-cover bg-center opacity-30"></div>
 
             {/* Navbar */}
-            <div className="relative z-10 fixed top-0 left-0 w-full bg-white/10 backdrop-blur-lg shadow-md border-b border-gray-300">
-                <div className="container flex items-center justify-between mx-auto px-4 lg:px-10 py-4">
+            <div className="relative z-10  top-0 left-0 w-full bg-white/10 backdrop-blur-lg shadow-md">
+                <div className="container flex items-center justify-between mx-auto px-2 lg:px-7 py-2">
                     {/* Logo */}
                     <a href="/">
                         <img src={logoMain} alt="Logo" className="h-12" />

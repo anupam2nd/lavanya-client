@@ -38,15 +38,10 @@ export default function Home() {
             doorstep.
           </p>
           <p className="md:pl-16">
-            At Lavanya, we believe that beauty is not just about looking
-            good—it’s about feeling confident and radiant on your special day!
-            Whether it's a wedding, party, corporate event, or a casual
-            makeover, we bring professional beauty services right to your
-            doorstep. With a team of highly skilled makeup artists and beauty
-            experts, we ensure that every look is crafted to perfection. From
-            elegant bridal makeovers to glamorous party styles, our expertise
-            covers skincare, hair styling, advanced nail art, bridal makeup,
-            mehendi and more.
+            With a team of highly skilled makeup artists and beauty experts, we
+            ensure that every look is crafted to perfection. From elegant bridal
+            makeovers to glamorous party styles, our expertise covers skincare,
+            hair styling, advanced nail art, bridal makeup, mehendi and more.
           </p>
         </div>
       </section>

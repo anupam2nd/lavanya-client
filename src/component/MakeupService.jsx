@@ -3,10 +3,10 @@ import { FaAirbnb, FaEye, FaCut, FaPaintBrush } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const services = [
-  { id: 1, icon: <FaPaintBrush size={50} />, title: "Bridal Makeup" },
-  { id: 2, icon: <FaEye size={50} />, title: "Party Makeup" },
-  { id: 3, icon: <FaAirbnb size={50} />, title: "Mehendi" },
-  { id: 4, icon: <FaCut size={50} />, title: "Nail Art" },
+  { id: 1, icon: <FaPaintBrush size={50} />, title: "Bridal Makeup", desc : "It’s the day of your dreams. Let us make it gorgeous for you. " },
+  { id: 2, icon: <FaEye size={50} />, title: "Party Makeup", desc : "PARTY TIME!!! Yes, every eye will fix on you. Let us help you.  " },
+  { id: 3, icon: <FaAirbnb size={50} />, title: "Mehendi", desc : "Doesn’t matter what the occasion is. Your Mehendi will shine brightly.  " },
+  { id: 4, icon: <FaCut size={50} />, title: "Nail Art", desc : "Worried about the beauty of your Nails? Let us handle it   " },
 ];
 
 export default function MakeupServices() {
@@ -22,7 +22,7 @@ export default function MakeupServices() {
 
       {/* Service Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {services.map(({ id, icon, title }) => (
+        {services.map(({ id, icon, title, desc }) => (
           <div
             key={id}
             className="bg-pink-50 p-6 rounded-xl shadow-md transition-transform transform hover:scale-105"
@@ -32,8 +32,7 @@ export default function MakeupServices() {
             </div>
             <h3 className="text-xl font-semibold">{title}</h3>
             <p className="text-gray-600 text-sm mt-2">
-              Fusce cursus lectus tellus. Vivamus cursus turpis auctor semper
-              lobortis.
+              {desc}
             </p>
             <Link
               to={'/services'}

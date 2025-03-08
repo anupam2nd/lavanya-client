@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function AboutUs() {
   return (
@@ -8,7 +9,10 @@ export default function AboutUs() {
           <div className="flex flex-col md:flex-row items-center h-full p-5 md:p-0">
             <div className="w-full md:w-1/2 h-full relative flex items-center justify-center ">
               <div className="size-80 md:size-96 lg:size-[450px] overflow-hidden border-8 border-white bg-white/90 rounded-full">
-                <img src="/images/logo.png" className="w-full h-[550px] object-cover object-center transform -translate-y-1/7" />
+                <img
+                  src="/images/logo.png"
+                  className="w-full h-[500px] md:h-[550px] object-cover object-center transform -translate-y-1/4 md:-translate-y-1/7"
+                />
               </div>
             </div>
             <div className="w-full md:w-1/2 h-full flex flex-col items-center justify-center space-y-3 ">
@@ -16,10 +20,14 @@ export default function AboutUs() {
                 about us
               </h2>
               <p className="text-sm md:text-xl text-center">
-                At Labanya, we're passionate about helping you unlock your natural beauty. Our journey began with a simple goal: to provide exceptional makeup services that make every individual feel confident and glamorous. With years of experience and a team of skilled artists, we're dedicated to delivering personalized, high-quality services that exceed your expectations.
+                At Lavanya, we're passionate about helping you unlock your
+                natural beauty. Our journey began with a simple goal: to provide
+                exceptional makeup services that make every individual feel
+                confident and glamorous. With years of experience and a team of
+                skilled artists, we're dedicated to delivering personalized,
+                high-quality services that exceed your expectations.
               </p>
             </div>
-
           </div>
         </div>
       </div>
@@ -41,24 +49,41 @@ export default function AboutUs() {
             {/* Contact Details */}
             <div>
               <hr className="w-16 border-pink-500 mb-4" />
-              <p className="mb-4">
-                <span className="text-pink-500 font-semibold">Toll Free No:</span>{" "}
-                +91 81009-71969
-              </p>
+              <Link to={"tel:+03335081847"} target="">
+                <p className="mb-4">
+                  <span className="text-pink-500 font-semibold">
+                    Toll Free No:
+                  </span>{" "}
+                  (003) 3508 1847
+                </p>
+              </Link>
+              <Link to={"https://wa.me/+919230992768"} target="_blank">
+                <p className="mb-4">
+                  <span className="text-pink-500 font-semibold">Whatsapp:</span>{" "}
+                  (+91) 9230992768
+                </p>
+              </Link>
               <p className="mb-4">
                 <span className="text-pink-500 font-semibold">Email:</span>{" "}
-                <a href="mailto:reservation@frediasan.com" className="text-blue-600 hover:underline">
-                  contactus@sampurna.co.in
-                </a>
+                <Link
+                  className="text-blue-600 hover:underline"
+                  to="https:///mail.google.com/mail/?view=cm&fs=1&to=myylavanya@gmail.com"
+                  target="_blank"
+                >
+                  myylavanya@gmail.com
+                </Link>
               </p>
               <p>
-                <span className="text-pink-500 font-semibold">Address:</span> 3rd Floor (North), DN-30, Sector V, Salt Lake, Kolkata-700091
+                <span className="text-pink-500 font-semibold">Address:</span>{" "}
+                3rd Floor (North), DN-30, Sector V, Salt Lake, Kolkata-700091
               </p>
             </div>
 
             {/* Appointment Form */}
             <div>
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Quick Appointment</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-4">
+                Quick Appointment
+              </h2>
               <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="text"

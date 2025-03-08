@@ -24,10 +24,10 @@ export default function Services() {
         </div>
       </div>
       <div className="container py-10">
-        <h2 class="text-base/7 font-semibold text-primary text-gray-600">
+        <h2 className="text-base/7 font-semibold text-primary text-gray-600">
           Experience the Best: Unparalleled Quality Services Guaranteed!
         </h2>
-        <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+        <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
           Our Beauty Services
         </p>
       </div>

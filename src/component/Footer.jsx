@@ -53,12 +53,12 @@ export default function Footer() {
         <div>
           <Link to={"tel:+03335081847"}>
             <h3 className="text-pink-500 font-bold mb-2 text-2xl">
-              Call Us At: (003) 3508 1847
+              Call Us At: 033-35081847
             </h3>
           </Link>
           <Link to={"https://wa.me/+919230992768"} target="_blank">
             <h3 className="text-pink-500 font-bold mb-2 text-2xl">
-              Whatsapp: (+91) 9230992768
+              Whatsapp: +91-9230992768
             </h3>
           </Link>
           {/* <p>Service Hours:</p>

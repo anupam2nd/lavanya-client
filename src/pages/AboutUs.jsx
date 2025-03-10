@@ -54,13 +54,13 @@ export default function AboutUs() {
                   <span className="text-pink-500 font-semibold">
                     Toll Free No:
                   </span>{" "}
-                  (003) 3508 1847
+                  033-35081847
                 </p>
               </Link>
               <Link to={"https://wa.me/+919230992768"} target="_blank">
                 <p className="mb-4">
                   <span className="text-pink-500 font-semibold">Whatsapp:</span>{" "}
-                  (+91) 9230992768
+                  +91-9230992768
                 </p>
               </Link>
               <p className="mb-4">

@@ -86,7 +86,7 @@ export default function Services() {
               </div>
             </div>
             <div className="w-full min-w-32 h-auto shadow-lg">
-              <h2 className="font-sans text-xl font-extralight tracking-wider mb-2 px-2">Haldi/ Mehendi Look</h2>
+              <h2 className="font-sans text-xl font-extralight tracking-wider mb-2 px-2">Haldi/ Mehendi Look/ Vat Kapor</h2>
               <div className="h-fit">
                 <img src="/images/class-range-img/haldi.jpeg" className="w-full h-full" alt="haldi" />
               </div>
